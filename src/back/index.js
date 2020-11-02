@@ -1,5 +1,5 @@
 /*=============================================================================
- * Authors: Agustin Bassi, Brian Ducca, Santiago Germino 
+ * Authors: Federico Montes de Oca
  * Date: Jul 2020
  * Licence: GPLV3+
  * Project: DAW - CEIoT - Project Structure

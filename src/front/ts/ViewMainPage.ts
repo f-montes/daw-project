@@ -1,33 +1,26 @@
-class ViewMainPage
-{
-    private myf:MyFramework;
+class ViewMainPage {
+    private myf: MyFramework;
 
-    constructor(myf:MyFramework)
-    {
+    constructor(myf: MyFramework) {
         this.myf = myf;
     }
 
-    showDevices(list: DeviceInt[]):void
-    {
-        let e:HTMLElement = this.myf.getElementById ("devicesList");
+    showDevices(list: DeviceInt[]): void {
+        let e: HTMLElement = this.myf.getElementById("devicesList");
 
-        for (let dev of list)
-        {
+        for (let dev of list) {
             let image = "lightbulb.png";
-            if (dev.type == 1)
-            {
+            if (dev.type == 1) {
                 image = "window.png"
             }
 
             let checked = "";
-            if (dev.state == 1)
-            {
+            if (dev.state == 1) {
                 checked = "checked"
             }
 
             let isWindow = "";
-            if (dev.type == 1)
-            {
+            if (dev.type == 1) {
                 isWindow = "checked"
             }
 
@@ -69,34 +62,30 @@ class ViewMainPage
         }
     }
 
-    getPowerSwitchStateById(id:string):boolean
-    {
-        let e:HTMLElement = this.myf.getElementById(id);
-        let i:HTMLInputElement = <HTMLInputElement> e;
+    getPowerSwitchStateById(id: string): boolean {
+        let e: HTMLElement = this.myf.getElementById(id);
+        let i: HTMLInputElement = <HTMLInputElement>e;
 
         return i.checked;
     }
 
-    getTypeSwitchStateById(id:string):boolean
-    {
-        let e:HTMLElement = this.myf.getElementById(id);
-        let i:HTMLInputElement = <HTMLInputElement> e;
+    getTypeSwitchStateById(id: string): boolean {
+        let e: HTMLElement = this.myf.getElementById(id);
+        let i: HTMLInputElement = <HTMLInputElement>e;
 
         return i.checked;
     }
 
-    getNameValueById(id:string):string
-    {
-        let e:HTMLElement = this.myf.getElementById(id);
-        let i:HTMLInputElement = <HTMLInputElement> e;
+    getNameValueById(id: string): string {
+        let e: HTMLElement = this.myf.getElementById(id);
+        let i: HTMLInputElement = <HTMLInputElement>e;
 
         return i.value;
     }
 
-    getDescriptionValueById(id:string):string
-    {
-        let e:HTMLElement = this.myf.getElementById(id);
-        let i:HTMLInputElement = <HTMLInputElement> e;
+    getDescriptionValueById(id: string): string {
+        let e: HTMLElement = this.myf.getElementById(id);
+        let i: HTMLInputElement = <HTMLInputElement>e;
 
         return i.value;
     }
